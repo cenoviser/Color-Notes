@@ -16,9 +16,12 @@ class NotesViewController: UIViewController {
         self.navigationItem.title = "Realm Notes"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(tapMakeNewNote))
         
         
-        
+    }
+    
+    @objc func tapMakeNewNote() {
+        self.navigationController?.pushViewController(NoteDetailController(), animated: true)
     }
 }

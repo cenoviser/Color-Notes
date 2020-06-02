@@ -15,6 +15,7 @@
 		DDD94A35247E3E74003C1D4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD94A33247E3E74003C1D4D /* LaunchScreen.storyboard */; };
 		DDD94A3D247F5186003C1D4D /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A3C247F5186003C1D4D /* NotesViewController.swift */; };
 		DDD94A3F2480D6ED003C1D4D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A3E2480D6ED003C1D4D /* Theme.swift */; };
+		DDD94A412486AFFB003C1D4D /* NoteDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DDD94A36247E3E74003C1D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDD94A3C247F5186003C1D4D /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		DDD94A3E2480D6ED003C1D4D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				DDD94A33247E3E74003C1D4D /* LaunchScreen.storyboard */,
 				DDD94A36247E3E74003C1D4D /* Info.plist */,
 				DDD94A3C247F5186003C1D4D /* NotesViewController.swift */,
+				DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */,
 				DDD94A3E2480D6ED003C1D4D /* Theme.swift */,
 			);
 			path = RealmNote;
@@ -148,6 +151,7 @@
 				DDD94A2D247E3E71003C1D4D /* ViewController.swift in Sources */,
 				DDD94A3F2480D6ED003C1D4D /* Theme.swift in Sources */,
 				DDD94A29247E3E71003C1D4D /* AppDelegate.swift in Sources */,
+				DDD94A412486AFFB003C1D4D /* NoteDetailController.swift in Sources */,
 				DDD94A2B247E3E71003C1D4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
