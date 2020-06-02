@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import UIKit
+class NotesViewController: UIViewController {
+    override func viewDidLoad() {
+        self.view.backgroundColor = Theme.backgroundColor
+    }
+}
