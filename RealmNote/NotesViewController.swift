@@ -18,10 +18,12 @@ class NotesViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(tapMakeNewNote))
         
+
         
     }
     
     @objc func tapMakeNewNote() {
         self.navigationController?.pushViewController(NoteDetailController(), animated: true)
+        
     }
 }
