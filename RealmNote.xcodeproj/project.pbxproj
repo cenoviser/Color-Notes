@@ -17,6 +17,8 @@
 		DDD94A3F2480D6ED003C1D4D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A3E2480D6ED003C1D4D /* Theme.swift */; };
 		DDD94A412486AFFB003C1D4D /* NoteDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */; };
 		DDD94A43248A32D6003C1D4D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A42248A32D6003C1D4D /* Note.swift */; };
+		DDD94A46248BC700003C1D4D /* NoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A45248BC700003C1D4D /* NoteDataSource.swift */; };
+		DDD94A48248BC72F003C1D4D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A47248BC72F003C1D4D /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DDD94A3E2480D6ED003C1D4D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailController.swift; sourceTree = "<group>"; };
 		DDD94A42248A32D6003C1D4D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		DDD94A45248BC700003C1D4D /* NoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDataSource.swift; sourceTree = "<group>"; };
+		DDD94A47248BC72F003C1D4D /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		DDD94A27247E3E71003C1D4D /* RealmNote */ = {
 			isa = PBXGroup;
 			children = (
+				DDD94A44248BC6DB003C1D4D /* Model */,
 				DDD94A28247E3E71003C1D4D /* AppDelegate.swift */,
 				DDD94A2A247E3E71003C1D4D /* SceneDelegate.swift */,
 				DDD94A2C247E3E71003C1D4D /* ViewController.swift */,
@@ -73,10 +78,19 @@
 				DDD94A36247E3E74003C1D4D /* Info.plist */,
 				DDD94A3C247F5186003C1D4D /* NotesViewController.swift */,
 				DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */,
-				DDD94A42248A32D6003C1D4D /* Note.swift */,
 				DDD94A3E2480D6ED003C1D4D /* Theme.swift */,
 			);
 			path = RealmNote;
+			sourceTree = "<group>";
+		};
+		DDD94A44248BC6DB003C1D4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDD94A42248A32D6003C1D4D /* Note.swift */,
+				DDD94A45248BC700003C1D4D /* NoteDataSource.swift */,
+				DDD94A47248BC72F003C1D4D /* DataSource.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD94A46248BC700003C1D4D /* NoteDataSource.swift in Sources */,
 				DDD94A3D247F5186003C1D4D /* NotesViewController.swift in Sources */,
 				DDD94A2D247E3E71003C1D4D /* ViewController.swift in Sources */,
+				DDD94A48248BC72F003C1D4D /* DataSource.swift in Sources */,
 				DDD94A43248A32D6003C1D4D /* Note.swift in Sources */,
 				DDD94A3F2480D6ED003C1D4D /* Theme.swift in Sources */,
 				DDD94A29247E3E71003C1D4D /* AppDelegate.swift in Sources */,
