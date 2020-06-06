@@ -6,7 +6,6 @@
 //  Copyright © 2020 Jiwoo Ban. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class NoteDetailController: UIViewController {
@@ -22,22 +21,29 @@ class NoteDetailController: UIViewController {
         textView.isScrollEnabled = true
         textView.backgroundColor = UIColor.clear
         textView.dataDetectorTypes = .all
-        
         return textView
     }()
     
     var note: Note? = nil
+    let placeholder = "Tap here to type..."
     
     var originalContent: String = ""
-    
-    var placeholder = "Tap here to type..."
-    
     var shouldDelete: Bool = false
     
     var doneButton: UIBarButtonItem? = nil
     var trashButton: UIBarButtonItem? = nil
     
+    let noteDataSource: NoteDataSource
     
+    init(noteDataSource: NoteDataSource) {
+        self.noteDataSource = noteDataSource
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         self.view.backgroundColor = Theme.backgroundColor
@@ -50,20 +56,18 @@ class NoteDetailController: UIViewController {
         
         self.originalContent = self.note?.content ?? ""
         
-        self.view.addSubview(textView)
+        self.view.addSubview(self.textView)
         
         self.textView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         self.textView.leadingAnchor.constraint(equalTo: self.view.readableContentGuide.leadingAnchor).isActive = true
-        self.textView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        self.textView.trailingAnchor.constraint(equalTo: self.view.readableContentGuide.trailingAnchor).isActive = true
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
-        //노트의 내용이 비어있으면 placeholder로 표시하기
         self.textView.text = self.note?.content.isEmpty == true ? self.placeholder : self.note?.content
+        self.textView.delegate = self
         
         self.doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
-        
         self.trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
-        
         
         if let trashButton = self.trashButton {
             self.navigationItem.rightBarButtonItems = [trashButton]
@@ -79,4 +83,48 @@ class NoteDetailController: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.textView.text.isEmpty || self.shouldDelete {
+            self.note?.delete(dataSource: self.noteDataSource)
+        } else {
+            // Ensure that the content of the note has changed.
+            guard self.originalContent != self.note?.content else {
+                return
+            }
+            
+            self.note?.write(dataSource: self.noteDataSource)
+        }
+    }
+    
+}
+
+extension NoteDetailController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == self.placeholder {
+            textView.text = ""
+        }
+        
+        self.navigationItem.hidesBackButton = true
+        
+        if let trashButton = self.trashButton, let doneButton = self.doneButton {
+            self.navigationItem.rightBarButtonItems = [doneButton, trashButton]
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = self.placeholder
+        }
+        
+        self.note?.content = textView.text
+        
+        if let trashButton = self.trashButton {
+            self.navigationItem.rightBarButtonItems = [trashButton]
+        }
+        
+        self.navigationItem.hidesBackButton = false
+    }
+    
 }

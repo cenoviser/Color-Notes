@@ -24,4 +24,35 @@ class Note {
     }
 }
 
+
+
 //Connect with Realm(RealmNote.swift)
+//RealmNote.swift와 Note 연결 짓기.
+extension Note {
+    
+    convenience init(realmNote: RealmNote) {
+        self.init(identifier: realmNote.identifier, content: realmNote.content, lastEdited: realmNote.lastEdited)
+    }
+    
+    //Make realmNote Property,
+    var realmNote: RealmNote {
+        //So we can access the RealmNote
+        return RealmNote(note: self)
+    }
+} //이제 DataSource.swift에 데이터를 저장할 수 있다.
+
+
+
+extension Note: Writable {
+    func write(dataSource: DataSource) {
+        self.lastEdited = Date()
+        
+        dataSource.store(object: self)
+    }
+    
+    func delete(dataSource: DataSource) {
+        dataSource.delete(object: self)
+    }
+    
+    
+}

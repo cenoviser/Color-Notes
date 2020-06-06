@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,9 +19,16 @@
 		DDD94A43248A32D6003C1D4D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A42248A32D6003C1D4D /* Note.swift */; };
 		DDD94A46248BC700003C1D4D /* NoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A45248BC700003C1D4D /* NoteDataSource.swift */; };
 		DDD94A48248BC72F003C1D4D /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A47248BC72F003C1D4D /* DataSource.swift */; };
+		DDD94A4A248BCC2E003C1D4D /* Writable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A49248BCC2E003C1D4D /* Writable.swift */; };
+		DDD94A4C248BDA02003C1D4D /* NoteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A4B248BDA02003C1D4D /* NoteTableCell.swift */; };
+		DDD94A50248BE670003C1D4D /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A4F248BE670003C1D4D /* RealmNote.swift */; };
+		E51010C45E9C47875F9C2D23 /* Pods_RealmNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA91BEBFE92377B72A9FA602 /* Pods_RealmNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2E85A3AAE9B80178AB39C6 /* Pods-RealmNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmNote.debug.xcconfig"; path = "Target Support Files/Pods-RealmNote/Pods-RealmNote.debug.xcconfig"; sourceTree = "<group>"; };
+		AA91BEBFE92377B72A9FA602 /* Pods_RealmNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2074C06358B83363041859B /* Pods-RealmNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmNote.release.xcconfig"; path = "Target Support Files/Pods-RealmNote/Pods-RealmNote.release.xcconfig"; sourceTree = "<group>"; };
 		DDD94A25247E3E71003C1D4D /* RealmNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD94A28247E3E71003C1D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD94A2A247E3E71003C1D4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +43,9 @@
 		DDD94A42248A32D6003C1D4D /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		DDD94A45248BC700003C1D4D /* NoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDataSource.swift; sourceTree = "<group>"; };
 		DDD94A47248BC72F003C1D4D /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		DDD94A49248BCC2E003C1D4D /* Writable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writable.swift; sourceTree = "<group>"; };
+		DDD94A4B248BDA02003C1D4D /* NoteTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableCell.swift; sourceTree = "<group>"; };
+		DDD94A4F248BE670003C1D4D /* RealmNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51010C45E9C47875F9C2D23 /* Pods_RealmNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58DA68228A21E37502761329 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F2E85A3AAE9B80178AB39C6 /* Pods-RealmNote.debug.xcconfig */,
+				B2074C06358B83363041859B /* Pods-RealmNote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		805F28AAFE7FB30234D77989 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA91BEBFE92377B72A9FA602 /* Pods_RealmNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDD94A1C247E3E71003C1D4D = {
 			isa = PBXGroup;
 			children = (
 				DDD94A27247E3E71003C1D4D /* RealmNote */,
 				DDD94A26247E3E71003C1D4D /* Products */,
+				58DA68228A21E37502761329 /* Pods */,
+				805F28AAFE7FB30234D77989 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +98,8 @@
 		DDD94A27247E3E71003C1D4D /* RealmNote */ = {
 			isa = PBXGroup;
 			children = (
+				DDD94A4E248BDADD003C1D4D /* Controller */,
+				DDD94A4D248BDA1A003C1D4D /* View */,
 				DDD94A44248BC6DB003C1D4D /* Model */,
 				DDD94A28247E3E71003C1D4D /* AppDelegate.swift */,
 				DDD94A2A247E3E71003C1D4D /* SceneDelegate.swift */,
@@ -76,8 +108,6 @@
 				DDD94A31247E3E74003C1D4D /* Assets.xcassets */,
 				DDD94A33247E3E74003C1D4D /* LaunchScreen.storyboard */,
 				DDD94A36247E3E74003C1D4D /* Info.plist */,
-				DDD94A3C247F5186003C1D4D /* NotesViewController.swift */,
-				DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */,
 				DDD94A3E2480D6ED003C1D4D /* Theme.swift */,
 			);
 			path = RealmNote;
@@ -87,10 +117,29 @@
 			isa = PBXGroup;
 			children = (
 				DDD94A42248A32D6003C1D4D /* Note.swift */,
+				DDD94A49248BCC2E003C1D4D /* Writable.swift */,
 				DDD94A45248BC700003C1D4D /* NoteDataSource.swift */,
 				DDD94A47248BC72F003C1D4D /* DataSource.swift */,
+				DDD94A4F248BE670003C1D4D /* RealmNote.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DDD94A4D248BDA1A003C1D4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDD94A4B248BDA02003C1D4D /* NoteTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDD94A4E248BDADD003C1D4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDD94A402486AFFB003C1D4D /* NoteDetailController.swift */,
+				DDD94A3C247F5186003C1D4D /* NotesViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDD94A39247E3E74003C1D4D /* Build configuration list for PBXNativeTarget "RealmNote" */;
 			buildPhases = (
+				1C2850EED8B1F364050A5413 /* [CP] Check Pods Manifest.lock */,
 				DDD94A21247E3E71003C1D4D /* Sources */,
 				DDD94A22247E3E71003C1D4D /* Frameworks */,
 				DDD94A23247E3E71003C1D4D /* Resources */,
+				F46931DEFDBDBB2326B08D72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +210,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C2850EED8B1F364050A5413 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46931DEFDBDBB2326B08D72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmNote/Pods-RealmNote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmNote/Pods-RealmNote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealmNote/Pods-RealmNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDD94A21247E3E71003C1D4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,8 +260,11 @@
 				DDD94A46248BC700003C1D4D /* NoteDataSource.swift in Sources */,
 				DDD94A3D247F5186003C1D4D /* NotesViewController.swift in Sources */,
 				DDD94A2D247E3E71003C1D4D /* ViewController.swift in Sources */,
+				DDD94A4A248BCC2E003C1D4D /* Writable.swift in Sources */,
 				DDD94A48248BC72F003C1D4D /* DataSource.swift in Sources */,
+				DDD94A50248BE670003C1D4D /* RealmNote.swift in Sources */,
 				DDD94A43248A32D6003C1D4D /* Note.swift in Sources */,
+				DDD94A4C248BDA02003C1D4D /* NoteTableCell.swift in Sources */,
 				DDD94A3F2480D6ED003C1D4D /* Theme.swift in Sources */,
 				DDD94A29247E3E71003C1D4D /* AppDelegate.swift in Sources */,
 				DDD94A412486AFFB003C1D4D /* NoteDetailController.swift in Sources */,
@@ -314,11 +410,13 @@
 		};
 		DDD94A3A247E3E74003C1D4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2E85A3AAE9B80178AB39C6 /* Pods-RealmNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Z5AGKU435;
 				INFOPLIST_FILE = RealmNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,11 +430,13 @@
 		};
 		DDD94A3B247E3E74003C1D4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2074C06358B83363041859B /* Pods-RealmNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Z5AGKU435;
 				INFOPLIST_FILE = RealmNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

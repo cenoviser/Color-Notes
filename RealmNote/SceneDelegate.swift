@@ -22,7 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScence.coordinateSpace.bounds)
         window?.windowScene = windowScence
-        window?.rootViewController = UINavigationController(rootViewController: NotesViewController())
+        let noteDataSource = NoteDataSource()
+        
+        window?.rootViewController = UINavigationController(rootViewController: NotesViewController(noteDataSource: noteDataSource))
         window?.makeKeyAndVisible()
         
         
