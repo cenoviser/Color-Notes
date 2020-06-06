@@ -26,10 +26,29 @@ class NoteDetailController: UIViewController {
         return textView
     }()
     
+    var note: Note? = nil
+    
+    var originalContent: String = ""
+    
+    var placeholder = "Tap here to type..."
+    
+    var shouldDelete: Bool = false
+    
+    var doneButton: UIBarButtonItem? = nil
+    var trashButton: UIBarButtonItem? = nil
+    
+    
+    
     override func viewDidLoad() {
         self.view.backgroundColor = Theme.backgroundColor
         self.navigationItem.title = "Editing"
         self.navigationItem.largeTitleDisplayMode = .never
+        
+        if self.note == nil {
+            self.note = Note(content: "")
+        }
+        
+        self.originalContent = self.note?.content ?? ""
         
         self.view.addSubview(textView)
         
@@ -38,5 +57,26 @@ class NoteDetailController: UIViewController {
         self.textView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
+        //노트의 내용이 비어있으면 placeholder로 표시하기
+        self.textView.text = self.note?.content.isEmpty == true ? self.placeholder : self.note?.content
+        
+        self.doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        
+        self.trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
+        
+        
+        if let trashButton = self.trashButton {
+            self.navigationItem.rightBarButtonItems = [trashButton]
+        }
+    }
+    
+    @objc func didTapDone() {
+        self.textView.endEditing(true)
+    }
+    
+    @objc func didTapDelete() {
+        self.shouldDelete = true
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }
