@@ -14,6 +14,8 @@ class Theme {
     static var backgroundColor: UIColor {
         //Dark Mode
 //        return UIColor(red: 32/255, green: 32/255, blue: 32/255, alpha: 1.0)
+        // red: 0.13, green: 0.13, blue: 0.13, alpha: 1.0
+        
         
         //Deep Green Color
         return UIColor(red: 0.11, green:0.43, blue:0.11, alpha: 1.0)

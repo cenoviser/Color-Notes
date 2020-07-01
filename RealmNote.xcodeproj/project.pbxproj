@@ -22,6 +22,7 @@
 		DDD94A4A248BCC2E003C1D4D /* Writable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A49248BCC2E003C1D4D /* Writable.swift */; };
 		DDD94A4C248BDA02003C1D4D /* NoteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A4B248BDA02003C1D4D /* NoteTableCell.swift */; };
 		DDD94A50248BE670003C1D4D /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A4F248BE670003C1D4D /* RealmNote.swift */; };
+		DDD94A52248BEA59003C1D4D /* truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD94A51248BEA59003C1D4D /* truncate.swift */; };
 		E51010C45E9C47875F9C2D23 /* Pods_RealmNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA91BEBFE92377B72A9FA602 /* Pods_RealmNote.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		DDD94A49248BCC2E003C1D4D /* Writable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writable.swift; sourceTree = "<group>"; };
 		DDD94A4B248BDA02003C1D4D /* NoteTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableCell.swift; sourceTree = "<group>"; };
 		DDD94A4F248BE670003C1D4D /* RealmNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNote.swift; sourceTree = "<group>"; };
+		DDD94A51248BEA59003C1D4D /* truncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = truncate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				DDD94A33247E3E74003C1D4D /* LaunchScreen.storyboard */,
 				DDD94A36247E3E74003C1D4D /* Info.plist */,
 				DDD94A3E2480D6ED003C1D4D /* Theme.swift */,
+				DDD94A51248BEA59003C1D4D /* truncate.swift */,
 			);
 			path = RealmNote;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				DDD94A4A248BCC2E003C1D4D /* Writable.swift in Sources */,
 				DDD94A48248BC72F003C1D4D /* DataSource.swift in Sources */,
 				DDD94A50248BE670003C1D4D /* RealmNote.swift in Sources */,
+				DDD94A52248BEA59003C1D4D /* truncate.swift in Sources */,
 				DDD94A43248A32D6003C1D4D /* Note.swift in Sources */,
 				DDD94A4C248BDA02003C1D4D /* NoteTableCell.swift in Sources */,
 				DDD94A3F2480D6ED003C1D4D /* Theme.swift in Sources */,

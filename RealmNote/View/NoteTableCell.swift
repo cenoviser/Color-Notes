@@ -13,7 +13,12 @@ class NoteTableCell: UITableViewCell {
     let customBackgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1.0)
+        //다크모드
+//        view.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1.0)
+        //그린모드
+//        view.backgroundColor = UIColor(red: 0.11, green:0.43, blue:0.11, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 0.19, green:0.7, blue:0.19, alpha: 1.0)
+
         view.layer.cornerRadius = 10
         view.clipsToBounds = true
         return view
